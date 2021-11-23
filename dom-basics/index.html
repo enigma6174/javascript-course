@@ -5,17 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>DOM Interaction</title>
+    <style>
+      .red-bg {
+        background-color: red;
+        color: white;
+      }
+
+      .visible {
+        display: block;
+      }
+
+      .invisible {
+        display: none;
+      }
+
+      .fixed {
+        position: absolute;
+      }
+    </style>
     <link rel="shortcut icon" type="image/jpg" href="assets/img/favicon.ico" />
     <!-- <script src="assets/scripts/downloaded.js" defer></script> -->
-    <script src="assets/scripts/app.js" defer></script>
+    <!-- <script src="assets/scripts/selectors.js" defer></script> -->
+    <!-- <script src="assets/scripts/traversal.js" defer></script> -->
+    <!-- <script src="assets/scripts/custom.js" defer></script> -->
   </head>
   <body>
     <header><h1 id="main-title">Dive into the DOM!</h1></header>
-    <ul>
-      <li>Item 1</li>
-      <li class="list-item">Item 2</li>
-      <li class="list-item">Item 3</li>
-    </ul>
-    <input type="text" value="default text" />
+    <section>
+      <ul>
+        <li class="list-item">Item 1</li>
+        <li class="list-item">Item 2</li>
+        <li class="list-item">Item 3</li>
+      </ul>
+    </section>
+    <div class="fixed">
+      <input type="text" value="default text" />
+      <button>Toggle</button>
+    </div>
   </body>
 </html>
