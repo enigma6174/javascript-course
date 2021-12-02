@@ -156,10 +156,6 @@ const addMovieHandler = () => {
   clearInputs();
   renderNewMovieElement(movieObject);
   updateUI();
-
-  // toggleMovieModal();
-  // clearInputs();
-  // renderMovies(movieObject);
 };
 
 // Event handler for the backdrop DOM object
