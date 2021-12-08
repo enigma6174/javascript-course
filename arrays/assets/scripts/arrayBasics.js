@@ -27,17 +27,20 @@ console.log(array5[0]);
 // This returns an array-like object
 const listItems = document.querySelectorAll("li");
 console.log(listItems);
-console.log(listItems.length);
+
+console.log("After Conversion");
 
 // Convert the array-like object to JavaScript array
 // Array.from() is used to convert iterables into arrays
 const listItemsArray = Array.from(listItems);
 console.log(listItemsArray);
-console.log(listItemsArray.length);
 
 const moreListItems = document.getElementsByTagName("li");
-const moreListItemsArray = Array.from(moreListItems);
 console.log(moreListItems);
+
+console.log("After Conversion");
+
+const moreListItemsArray = Array.from(moreListItems);
 console.log(moreListItemsArray);
 
 console.log("\n");
