@@ -62,41 +62,46 @@ console.log("bucket", bucket);
 
 // Splice() method is used to add or remove elements from an array
 // It is only available to arrays; array-like objects and other iterables do not have access
+// The first argument is for starting index; second argument for number of elements to delete
+// Deletion of elements start from the index specified in the first argument
+// Every argument after the 2nd argument is an element that gets inserted into the array
+// Insertion of elements also starts from the index specified at first argument (after any deletions)
 
-// Add element between index 1 and 2
+// Add element at index 1
 bucket.splice(1, 0, -20);
 console.log("bucket", bucket);
 
-// Add 3 elements between index 4 and 5
+// Add 3 elements starting at index 4
 bucket.splice(4, 0, -5, -6, -7);
 console.log("bucket", bucket);
 
-// Delete an element at index 2
+// Delete the element at index 2
 bucket.splice(2, 1);
 console.log("bucket", bucket);
 
-// Delete 4 elements from index 1
+// Delete 4 elements starting from index 1
 bucket.splice(1, 4);
 console.log("bucket", bucket);
 
-// Delete 3 elements after index 1 and add 5 elements
+// Delete 3 elements from index 2 and add 5 elements
+// First the 3 elements will be deleted and then the insertion will start from index 2
 bucket.splice(2, 3, -1, -11, -111, -5, -25);
 console.log("bucket", bucket);
 
 // Splice also returns an array of deleted elements
-// Delete all the elements in the array after index 0 (or from index 1 onwards)
+// If only one argument is passed every element starting from that index is deleted
 let deletedElements = bucket.splice(1);
 console.log("bucket", bucket);
 console.log("deletedElements", deletedElements);
 
 // New index not present in original so it is added
-bucket.splice(1, 0, 11, 21, 31, 41, 51);
+// However insertion will start after the last element
+bucket.splice(3, 0, 11, 21, 31, 41, 51);
 console.log("bucket", bucket);
 
 // Splice also accepts negative indices to access elements
-// Remove 2 elements starting from the 2nd last index
-// Remove elements from indices (-2, -1)
-deletedElements = bucket.splice(-2, 2);
+// Remove 2 elements starting from the 3rd last index
+deletedElements = bucket.splice(-3, 2);
 console.log("\nbucket", bucket);
 console.log("deletedElements", deletedElements);
 
