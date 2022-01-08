@@ -219,6 +219,7 @@ foo1.call(someObject);
 
 console.clear();
 
+console.log("example_1");
 const person1 = {
   name: "Max",
   greet() {
@@ -226,9 +227,9 @@ const person1 = {
     console.log(this.name);
   },
 };
-
 person1.greet();
 
+console.log("\nexample_2");
 const person2 = {
   name: "Max",
   greet() {
@@ -242,6 +243,9 @@ const admin = { age: 30 };
 admin.greet = person2.greet;
 admin.greet();
 
+name = "global object";
+
+console.log("\nexample_3");
 const person3 = {
   name: "Max",
   greet3() {
@@ -253,6 +257,7 @@ const person3 = {
 const { greet3 } = person3;
 greet3();
 
+console.log("\nexample_4");
 const person4 = {
   name: "Max",
   greet4() {
@@ -264,6 +269,7 @@ const person4 = {
 const { greet4 } = person4;
 greet4.call(this);
 
+console.log("\nexample_5");
 const person5 = {
   name: "Max",
   greet5() {
